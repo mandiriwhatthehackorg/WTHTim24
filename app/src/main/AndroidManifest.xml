@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tim24.investmentteam24">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".features.AddDepositActivity">
+        </activity>
+        <activity android:name=".features.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".features.AddGoalActivity"
+                android:label="Add Goal"/>
+        <activity
+                android:name=".features.ListVendorsActivity"
+                android:label="Pick Vendors"/>
+        <activity
+                android:name=".features.ListGoalsActivity"
+                android:label="Pick Goals"/>
+        <activity
+                android:name=".features.ShowCashbackActivity"
+                android:label="Payment Success"/>
+        <activity
+                android:name=".features.InputPINActivity"
+                android:label="Enter PIN"/>
+        <activity
+                android:name=".features.scan.ScanActivity"
+                android:label="Scan QR"/>
+        <activity
+                android:name=".features.detail_transaction.DetailTrxActivity"
+                android:label="Transaction Detail"/>
+    </application>
+
+</manifest>

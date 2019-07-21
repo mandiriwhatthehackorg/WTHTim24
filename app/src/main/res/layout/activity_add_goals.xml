@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".features.AddGoalActivity">
+
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutTargetAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputTargetAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|numberSigned"
+                android:textColor="@color/colorPrimaryDark"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutTargetYear"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Target Year"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTargetAmt">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputTargetYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|numberSigned"
+                android:textColor="@color/colorPrimaryDark"/>
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp">
+        <android.support.v7.widget.AppCompatButton
+                android:text="Cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/ButtonTransparent.Negative"
+                android:background="@drawable/btn_transparent"
+                android:id="@+id/cancelButton"/>
+        <android.support.v7.widget.AppCompatButton
+                android:text="Save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/ButtonInfo"
+                android:id="@+id/saveButton" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
